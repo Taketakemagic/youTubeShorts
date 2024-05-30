@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTubeShortsUrlChanger</title>
 </head>
+
 <body>
-  <textarea name="befor" id="befor"></textarea>
-  <input type="button" value="変換" onclick="buttonClick()">
+  <div>
+    <textarea name="befor" id="befor"></textarea>
+  </div>
+  <div>
+    <input type="button" value="貼付" onclick="past()">
+    <input type="button" value="変換" onclick="change()">
+    <input type="button" value="クリア" onclick="clearFields()">
+  </div>
+
+
+  </div>
   <div name="after" id="after" style="margin-top: 20px; font-size: 18px; color: #333;"></div>
 </body>
+
 </html>
 <script src="index.js"></script>

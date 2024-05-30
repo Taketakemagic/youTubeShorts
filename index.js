@@ -1,4 +1,15 @@
-function buttonClick() {
+//貼り付け処理
+async function past() {
+  try {
+    const text = await navigator.clipboard.readText();
+    document.getElementById('befor').value = text;
+  } catch (err) {
+    console.error('Failed to read clipboard contents: ', err);
+  }
+}
+
+//変換処理
+function change() {
   var befor = document.getElementById('befor').value;
   var after = convertYoutubeLiveUrl(befor);
   var outputDiv = document.getElementById('after');
@@ -12,7 +23,6 @@ function buttonClick() {
     outputDiv.appendChild(link);
   }
 }
-
 
 function convertYoutubeLiveUrl(befor) {
   var livePattern = 'https://www.youtube.com/live/';
@@ -32,4 +42,10 @@ function createLink(after) {
   anchor.innerText = after;
   anchor.target = '_blank'; // リンクを新しいタブで開く
   return anchor;
+}
+
+//削除処理
+function clearFields() {
+  document.getElementById('befor').value = '';
+  document.getElementById('after').innerHTML = '';
 }
