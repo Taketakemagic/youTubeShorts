@@ -49,3 +49,9 @@ function clearFields() {
   document.getElementById('befor').value = '';
   document.getElementById('after').innerHTML = '';
 }
+
+//一括ボタン処理
+async function oneTime() {
+  await past();
+  change();
+}

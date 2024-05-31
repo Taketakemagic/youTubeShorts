@@ -5,21 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTubeShortsUrlChanger</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="banana.png">
 </head>
 
 <body>
-  <div>
-    <textarea name="befor" id="befor"></textarea>
+  <div class="main">
+    <div class="textarea">
+      <textarea name="befor" id="befor"></textarea>
+    </div>
+    <div>
+      <input class="past" type="button" value="貼付" onclick="past()">
+      <input class="change" type="button" value="変換" onclick="change()">
+      <input class="clearFields" type="button" value="クリア" onclick="clearFields()">
+    </div>
+    <div>
+      <input class="oneTime" type="button" value="一括" onclick="oneTime()">
+    </div>
+    </div>
+    <div name="after" id="after" style="text-align: center; margin-top: 20px; font-size: 18px;"></div>
   </div>
-  <div>
-    <input type="button" value="貼付" onclick="past()">
-    <input type="button" value="変換" onclick="change()">
-    <input type="button" value="クリア" onclick="clearFields()">
-  </div>
-
-
-  </div>
-  <div name="after" id="after" style="margin-top: 20px; font-size: 18px; color: #333;"></div>
 </body>
 
 </html>
